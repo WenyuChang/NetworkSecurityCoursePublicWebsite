@@ -1,0 +1,80 @@
+﻿.style1
+{
+    color: #FFCC00;
+    font-size: small;
+    font-weight: bold;
+}
+.link_left
+{
+    color:#FFFFFF;
+    font-size: small; 
+    text-decoration:none; 
+}
+.link_menu
+{
+    color:#00008A;
+    font-weight: bold;
+    text-decoration:none;
+}
+li
+{
+    margin-bottom: 2px;
+}
+#menu
+{
+    background-image: url('../image/NevigateBG.png');
+    height:30px;
+    margin-top:-16px;
+    *margin-top:0px !important;
+    _margin-top:0px;
+    font-size:14px;
+}
+#menu ul
+{
+    height:30px;
+    line-height:20px;
+    padding:5px;
+}
+#menu ul li
+{
+    display:block;
+    float:left;
+    margin:0px 5px;
+    border-right:solid 1px #fff;
+    padding-right:8px;
+}
+#menu a:hover
+{
+    color:#fff;
+    text-decoration:underline;
+}
+#foot
+{
+    width:1024px;
+    height:60px;
+    background-image: url('../image/FootBG.png');
+}
+#search
+{
+    text-align:center;
+    margin:20px 5px;
+    width:764px;
+    height:40px;
+    border-bottom:solid 1px black;
+}
+.module
+{
+    text-align: center;
+}
+.moduleTitle, title
+{
+    color: #FF6600;
+    font-weight: bold;
+    text-align: center;
+    margin:5px auto;
+}
+.moduleContent
+{
+    text-align: center;
+    line-height:150%;
+}

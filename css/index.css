@@ -1,0 +1,29 @@
+﻿.introduction_content
+{
+    font-size: small;
+    
+}
+.style2
+{
+    color: #FF6600;
+    font-weight: bold;
+    text-align: center;
+}
+#introduction
+{
+    width:740px;
+    margin:10px 15px;
+    border-bottom:solid 1px black
+}
+#news
+{   
+    width:740px;
+    height:150px;
+    margin:10px 15px;
+}
+#message
+{
+    width:740px;
+    margin:10px 15px;
+    border-top:solid 1px black;
+}

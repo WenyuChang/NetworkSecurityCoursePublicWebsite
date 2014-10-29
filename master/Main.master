@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../image/favicon.ico" rel="SHOTCUT ICON" type="image/x-icon"/>
+    <link href="../css/Main.css" rel="stylesheet" type="text/css" />
+    <script src="../javascript/jquery-1.4.3.min.js" type="text/javascript"></script>
+    <script src="../javascript/jquery.qtip-1.0.0-rc3.min.js" type="text/javascript"></script>
+    <script src="../javascript/jquery.d.imagechange.min.js" type="text/javascript"></script>
+    <script src="../javascript/headShow.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style="margin:0px;padding:0px;">
+    <form id="form1" runat="server" style="width: 1025px; height: auto; margin: 0px auto;">
+        <div id="left" style="float: left; width:250px;background-color: #00008A;height:100%">
+            <div style="color: #FFFFFF; background-color: #00008A; text-align: center;">
+                <br />
+                <img alt="" src="../image/logo.jpg" style="width: 140px; height: 140px" /><br />
+                <img alt="" src="../image/logoword.jpg" style="width: 246px; height: 103px" /><br />
+                <br />
+            </div>
+            <div style="color: #FFFFFF; background-color: #00008A;">
+                <br />
+                <asp:Login ID="Login1" runat="server" CreateUserText="注册" Font-Bold="True" 
+                    Font-Size="Small" PasswordRecoveryText="找回密码" TitleText="" 
+                    onauthenticate="Login1_Authenticate" 
+                    CreateUserUrl="~/WebRoot/register.aspx" 
+                    PasswordRecoveryUrl="~/WebRoot/findPWD.aspx">
+                    <HyperLinkStyle ForeColor="White" />
+                </asp:Login>
+                <div id="logged" runat="server" visible=false></div>
+                <asp:Button id="logout" runat="server" visible="false" Text="注销" 
+                    onclick="logout_Click" />
+                <br />
+            </div>
+            <div style="color: #FFFFFF; background-color: #00008A; text-align: center;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="color: #FFFFFF; background-color: #00008A;">
+                <span class="style1">站内导航</span>
+                <ul>
+                    <li><a class ="link_left" href="">东华大学研究生部</a></li>
+                    <li><a class ="link_left" href="">东华大学数字化校园信息门户</a></li>
+                    <li><a class ="link_left" href="">东华大学图书馆</a></li>
+                    <li><a class ="link_left" href="">东华大学新闻网</a></li>
+                    <li><a class ="link_left" href="">深入学习科学发展观专题</a></li>
+                </ul>
+                <span class="style1">友情链接
+                </span>
+                <ul>
+                    <li><a class ="link_left" href="">2010年硕士研究生</a></li>
+                    <li><a class ="link_left" href="">网络课件资源</a></li>
+                    <li><a class ="link_left" href="">上海大学生在线e-class登录</a></li>
+                    <li><a class ="link_left" href="">上海市精品课程数据库系统</a></li>
+                    <li><a class ="link_left" href="">电子期刊CPU Times下载</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="right" style="float: left; width:774px;">
+            <div id="pic">
+            </div>
+            <div style="clear:both;display:none;"></div>
+            <div id="menu">
+                <ul>
+                    <li><a class ="link_menu" href="../WebRoot/index.aspx" >首页</a></li>
+                    <li><a class ="link_menu" href="../WebRoot/news.aspx">新闻公告</a></li>
+                    <li><a class ="link_menu" href="../WebRoot/guestBook.aspx">留言板</a></li>
+                    <li><a class ="link_menu" href="">下载专区</a></li>
+                    <li><a class ="link_menu" href="">讨论区</a></li>
+                    <li  style="border-right-width:0px;"><a class ="link_menu" href="">中/英文</a></li>
+                    
+                </ul>            
+            </div>
+            <div id ="search">
+                <asp:Label ID="Search_Label" runat="server" Text="搜索：" 
+                    style="font-weight: 700; font-size: small"></asp:Label>
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem Value="news">新闻</asp:ListItem>
+                    <asp:ListItem Value="message">留言</asp:ListItem>
+                    <asp:ListItem Value="software">软件</asp:ListItem>
+                    <asp:ListItem Value="ppt">课件</asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;
+                <asp:TextBox ID="searchText" runat="server" Width="350px"></asp:TextBox>
+                &nbsp;
+                <asp:Button ID="Button1" runat="server" Text="Button" />
+                
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="foot">
+        
+        </div>
+    </form>
+</body>
+</html>
